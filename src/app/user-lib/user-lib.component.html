@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UserLoginPage</title>
+</head>
+
+<body>
+    User Successfully Logged in .....
+    <nav class="navbar navbar-custom">
+        <a class="navbar-brand">DashBoard</a>
+        <form class="form-inline">
+            <button class="btn btn-outline-danger my-2 my-sm-0" data-toggle="modal" data-target="#exampleModal"
+                type="submit">LogOut</button>
+
+            
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Alert !!!</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to LogOut ?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                (click)="logout()">Yes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </nav>
+    <hr>
+<div class="container">
+    <b>User Details</b> <br>
+    <p>
+    Student Name : Juhi Gajbhiye  <br>  
+    Student ID   : 515501   <br>
+    Class        : 10th     <br>
+    Division     : "B"      <br>
+    </p>
+
+<hr>
+        <h3>Search a Book</h3>
+        <nav class="navbar">
+       
+           <input class="form-control" type="text" placeholder="Type title" aria-label="Search" name="Book_title" 
+           [(ngModel)]="Book_title" (ngModelChange)="Search()">
+
+       </nav> 
+
+<hr>
+    <b>Issued Books</b> <br>
+    <table class="table table-bordered">
+            <thead>
+             <tr>
+               <th style = "font-size: 20px;">id</th>
+               <th style = "font-size: 20px;">Book_title</th>
+               <th style = "font-size: 20px;">Book_auther</th>
+               <th style = "font-size: 20px;">Issued_Date</th>
+               <th style = "font-size: 20px;">Due_Date</th>
+             </tr>
+           </thead>
+              <tbody>
+             <tr>
+               <td style = "font-size: 20px;">33</td>
+               <td style = "font-size: 20px;">The Da Vinci Code</td>
+               <td style = "font-size: 20px;">Dan Brown</td>
+               <td style = "font-size: 20px;">19-11-2020</td>
+               <td style = "font-size: 20px;">19-12-2020</td>
+               <td>
+                 
+                 <button type="button" class="btn btn-outline-danger">Delete</button>
+                
+               </td>
+             </tr>
+            
+ 
+           </tbody>   
+         </table>
+
+         <h3>Issue Book</h3>
+        <div *ngFor= "let userdetail of userDetails; let i = index">
+          <button *ngIf="i == 0" type="button" class="btn btn-secondary" (click)="add(userdetail)">Click Here</button>
+        </div>
+</div>
+</body>
+
+</html>
+

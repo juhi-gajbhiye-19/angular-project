@@ -1,0 +1,25 @@
+<div class="container-fluid">
+        <div class="form-group">
+            <label>Book_id</label>
+            <input type="text" class="form-control" [(ngModel)]="userdetailsFetch.id">
+        </div>
+        <div class="form-group">
+            <label>Book_title</label>
+            <input type="text" class="form-control" [(ngModel)]="userdetailsFetch.Book_title">
+        </div>
+        <div class="form-group">
+            <label>Book_auther</label>
+            <input type="text" class="form-control" [(ngModel)]="userdetailsFetch.Book_auther">
+        </div>
+        <div class="form-group">
+            <label>Issued_Date</label>
+            <input type="text" class="form-control" [(ngModel)]="userdetailsFetch.Issued_Date">
+        </div>
+        <div class="form-group">
+                <label>Due_Date</label>
+                <input type="text" class="form-control" [(ngModel)]="userdetailsFetch.Due_Date">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-danger" (click)="addDetail(userdetailsFetch)">Add Book</button>
+        </div>
+</div>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AdminPage</title>
+</head>
+<body>
+Admin Successfully Logged in .....
+<nav class="navbar navbar-custom">
+    <a class="navbar-brand">DashBoard</a>
+    <form class="form-inline">
+        <button class="btn btn-outline-danger my-2 my-sm-0" data-toggle="modal" data-target="#exampleModal"
+            type="submit">LogOut</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Alert !!!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure you want to LogOut ?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal"
+                        (click)="logout()">Yes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</nav>
+<hr>
+<!-- <div class="text-center align-middle">
+    <form class="form-inline my-2 my-lg-0">
+        <label for="search"><b>Search a Book</b></label>&nbsp;
+        <input class="form-control mr-sm-2" type="search" placeholder="Type UIN" aria-label="Search">
+        <input class="form-control mr-sm-2" type="search" placeholder="Type title" aria-label="Search">
+        <input class="form-control mr-sm-2" type="search" placeholder="Type author" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        &nbsp; * UIN=unique identification number
+
+    </form>
+</div>
+<hr>
+<div style="overflow-x:auto;">
+        <table>
+          <tr>
+            <th>Book UIN</th>
+            <th>Book Title</th>
+            <th>Book Author</th>
+            <th>Rack number</th>
+          </tr>
+          <tr>
+            <td>101</td>
+            <td>English</td>
+            <td>Ross Geller</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>102</td>
+            <td>Maths</td>
+            <td>Chandler Bing</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>103</td>
+            <td>Science</td>
+            <td>Monica Geller</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>104</td>
+            <td>History</td>
+            <td>Phoebe Buffay</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>105</td>
+            <td>Geography</td>
+            <td>Rachel Green</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>106</td>
+            <td>Computer</td>
+            <td>Joey Tribianni</td>
+            <td>4</td>
+        </tr>
+
+        </table>
+      </div> -->
+      <div class="container">
+        <h3>Search a Book</h3>
+        <nav class="navbar">
+           <!-- <input class="form-control" type="text" name="id" [(ngModel)]="id"
+            placeholder="Type UIN">
+           <button class="btn btn-outline-success" type="submit" (ngModelChange)="Search1()">Search</button> -->
+       
+           <input class="form-control" type="text" placeholder="Type title" aria-label="Search" name="Book_title" 
+           [(ngModel)]="Book_title" (ngModelChange)="Search()">
+
+           <!-- <input class="form-control" type="text" name="Book_auther" [(ngModel)]="Book_auther" aria-label="Search"
+           (ngModelChange)="Search()1" placeholder="Type author"> -->
+       </nav> 
+       <hr>
+         <table class="table table-bordered">
+           <thead>
+            <tr>
+              <th style = "font-size: 20px;">id</th>
+              <th style = "font-size: 20px;">Book_title</th>
+              <th style = "font-size: 20px;">Book_auther</th>
+              <th style = "font-size: 20px;">NumberOfBooks</th>
+            </tr>
+          </thead>
+             <tbody>
+            <tr *ngFor= "let user of users">
+              <td style = "font-size: 20px;">{{user.id}}</td>
+              <td style = "font-size: 20px;">{{user.Book_title}}</td>
+              <td style = "font-size: 20px;">{{user.Book_auther}}</td>
+              <td style = "font-size: 20px;">{{user.NumberOfBooks}}</td>
+              <td>
+                <button type="button" class="btn btn-outline-success" (click)="get()">Issue Book</button>&nbsp;&nbsp;
+                <button type="button" class="btn btn-outline-warning" (click)="update(user)">Update Details</button>&nbsp;&nbsp;
+                <button type="button" class="btn btn-outline-danger" (click)="deleteRow(user.id)">Delete</button>
+               
+              </td>
+            </tr>
+
+          </tbody>   
+        </table>
+        <h3>Add a Book</h3>
+        <div *ngFor= "let user of users; let i = index">
+          <button *ngIf="i == 0" type="button" class="btn btn-secondary" (click)="add(user)">Click Here</button>
+        </div>
+
+      </div>
+</body>
+</html>

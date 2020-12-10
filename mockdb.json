@@ -1,0 +1,69 @@
+{
+  "UserDetails": [
+    {
+      "id": "34",
+      "Book_title": "After",
+      "Book_auther": "Anna Todd",
+      "Issued_Date": "19-11-2020",
+      "Due_Date": "19-12-2020"
+    }
+  ],
+  "Users": [
+    {
+      "id": "34",
+      "Book_title": "After",
+      "Book_auther": "Anna Todd",
+      "NumberOfBooks": "67"
+    },
+    {
+      "id": "345",
+      "Book_title": "The Da Vinci Code",
+      "Book_auther": "Dan Brown",
+      "NumberOfBooks": "25"
+    },
+    {
+      "id": "76",
+      "Book_title": "Inside the Titanic",
+      "Book_auther": "Ken Marschall",
+      "NumberOfBooks": "3"
+    },
+    {
+      "id": "12",
+      "Book_title": "The Great Gatsby",
+      "Book_auther": "F. Scott Fitzgerald",
+      "NumberOfBooks": "89"
+    },
+    {
+      "id": "42",
+      "Book_title": "History of Mongolia",
+      "Book_auther": "Babar",
+      "NumberOfBooks": "90"
+    },
+    {
+      "id": "786",
+      "Book_title": "After Collision",
+      "Book_auther": "Anna Todd",
+      "NumberOfBooks": "13"
+    },
+    {
+      "id": "57",
+      "Book_title": "The Roman Revolution",
+      "Book_auther": "Ronald Syme",
+      "NumberOfBooks": "44"
+    },
+    {
+      "id": "30",
+      "Book_title": "Chronicles of Narnia",
+      "Book_auther": "C. S. Lewis",
+      "NumberOfBooks": "1"
+    }
+  ],
+  "posts": [
+    {
+      "id": 6,
+      "Book_title": "All Passion Spent",
+      "Book_auther": "Vita Sackville-West",
+      "NumberOfBooks": "1"
+    }
+  ]
+}
